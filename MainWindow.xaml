@@ -1,12 +1,112 @@
-﻿<Window x:Class="Prog_L9_Notes_Week_7.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Prog_L9_Notes_Week_7"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Canvas>
+﻿<Window
+    x:Class="Prog_L9_Notes_Week_7.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Prog_L9_Notes_Week_7"
+    mc:Ignorable="d"
+    Title="MainWindow"
+    Height="450"
+    Width="800">
+    <Canvas
+        x:Name="canvasParent">
+        <Canvas
+            Height="125"
+            Width="800"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Background="#FFD9D0D0">
+            <Label
+                Content="Part 1"
+                Canvas.Left="10"
+                Canvas.Top="10" />
+            <Button
+                x:Name="btnPart1"
+                Content="Display State"
+                Canvas.Left="612"
+                Canvas.Top="88"
+                Click="btnPart1_Click" />
+            <Label
+                x:Name="lblDisplayInfo"
+                Content="Label"
+                Canvas.Left="381"
+                Canvas.Top="17"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top" />
+            <CheckBox
+                x:Name="chkSausage"
+                Content="Sausage"
+                Canvas.Left="66"
+                Canvas.Top="35" />
+            <CheckBox
+                x:Name="chkPepperoni"
+                Content="Pepperoni"
+                Canvas.Left="66"
+                Canvas.Top="55" />
+
+            <GroupBox
+                Height="105"
+                Header="Pizza Size"
+                Width="101"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Canvas.Left="161"
+                Canvas.Top="3">
+                <StackPanel>
+                    <RadioButton
+                        x:Name="rbSmall"
+                        Content="Small"
+                        Canvas.Left="267"
+                        Canvas.Top="28"
+                        GroupName="grpPizzaSize"
+                        IsChecked="True" />
+                    <RadioButton
+                        x:Name="rbMedium"
+                        Content="Medium"
+                        Canvas.Left="267"
+                        Canvas.Top="48"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        GroupName="grpPizzaSize" />
+                    <RadioButton
+                        x:Name="rbLarge"
+                        Content="Large"
+                        Canvas.Left="266"
+                        Canvas.Top="68"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        GroupName="grpPizzaSize" />
+                </StackPanel>
+            </GroupBox>
+        </Canvas>
+        <GroupBox
+            Height="255"
+            Header="Themes"
+            Width="386"
+            HorizontalAlignment="Left"
+            Canvas.Top="130"
+            VerticalAlignment="Center">
+            <StackPanel>
+                <RadioButton
+                    x:Name="rbWhite"
+                    Content="White" 
+                    IsChecked="True"
+                    Checked="ChangeTheme" />
+                <RadioButton
+                    x:Name="rbBlack"
+                    Content="Black"
+                    Checked="ChangeTheme"/>
+                <RadioButton
+                    x:Name="rbRed"
+                    Content="Red"
+                    Checked="ChangeTheme"/>
+                <RadioButton
+                    x:Name="rbBlue"
+                    Content="blue"
+                    Checked="ChangeTheme"/>
+            </StackPanel>
+        </GroupBox>
 
     </Canvas>
 </Window>
