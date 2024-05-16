@@ -90,22 +90,68 @@
             <StackPanel>
                 <RadioButton
                     x:Name="rbWhite"
-                    Content="White" 
+                    Content="White"
                     IsChecked="True"
                     Checked="ChangeTheme" />
                 <RadioButton
                     x:Name="rbBlack"
                     Content="Black"
-                    Checked="ChangeTheme"/>
+                    Checked="ChangeTheme" />
                 <RadioButton
                     x:Name="rbRed"
                     Content="Red"
-                    Checked="ChangeTheme"/>
+                    Checked="ChangeTheme" />
                 <RadioButton
                     x:Name="rbBlue"
-                    Content="blue"
-                    Checked="ChangeTheme"/>
+                    Content="Blue"
+                    Checked="ChangeTheme" />
             </StackPanel>
+        </GroupBox>
+        <GroupBox
+            Height="269"
+            Header="Shipping Order"
+            Width="358"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Canvas.Left="422"
+            Canvas.Top="145">
+            <Canvas>
+                <Label
+                    Content="Order Name:"
+                    Canvas.Left="10"
+                    Canvas.Top="10" />
+                <TextBox
+                    x:Name="txbOrderName"
+                    Canvas.Left="91"
+                    TextWrapping="Wrap"
+                    Canvas.Top="14"
+                    Width="220"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center" />
+                <CheckBox
+                    x:Name="cbIsOvernight"
+                    Content="Overnight Delivery"
+                    Canvas.Left="17"
+                    Canvas.Top="52" />
+                <CheckBox
+                    x:Name="cbIsPerishable"
+                    Content="Perishable"
+                    Canvas.Left="149"
+                    Canvas.Top="52"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center" />
+                <Button
+                    x:Name="btnCreateOrder"
+                    Content="Create Order"
+                    Canvas.Left="17"
+                    Canvas.Top="80"
+                    Click="btnCreateOrder_Click" />
+                <Label
+                    x:Name="lblOrderlabel"
+                    Content="Oder Details Will Be Shown Here"
+                    Canvas.Left="17"
+                    Canvas.Top="110" />
+            </Canvas>
         </GroupBox>
 
     </Canvas>
